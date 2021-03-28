@@ -35,7 +35,10 @@ public class Cuenta {
 			this.tipointeres=tipointeres;
 			this.saldo=saldo;
 		}
-		
+		/**
+		 * 
+		 * @param a objeto Cuenta el constructor se inicia con una copia de objeto Cuenta
+		 */
 		public Cuenta(Cuenta a) {
 			this.nombrecliente=a.nombrecliente;
 			this.ncuenta=a.ncuenta;
@@ -67,7 +70,11 @@ public class Cuenta {
 		public double getSaldo() {
 			return saldo;
 		}
-
+		/**
+		 * 
+		 * @param ingreso valor numerico para sumar al saldo
+		 * @return devuelve true si se ha podido realizar el ingreso
+		 */
 		
 		public boolean ingreso(double ingreso) {
 			if (ingreso>=0) {
@@ -77,7 +84,11 @@ public class Cuenta {
 				return false;
 			}
 		}
-		
+		/**
+		 * 
+		 * @param reintegro valor numerico decrementear el valor de saldo
+		 * @return devuelve true si se ha realizado
+		 */
 		public boolean reintegro(double reintegro) {
 			if (reintegro>=0) {
 				if (this.saldo>=reintegro) {
@@ -90,7 +101,12 @@ public class Cuenta {
 				return false;
 			}
 		}
-		
+		/**
+		 * 
+		 * @param destino objeto Cuenta donce se realiza la transferencia
+		 * @param importe valor numerico importe a sumar en objeto destino
+		 * @return devuelve true si se ha podido realizar la transferencia
+		 */
 		public boolean transferencia(Cuenta destino,double importe) {
 			if (reintegro(importe)) {
 				destino.ingreso(importe);
