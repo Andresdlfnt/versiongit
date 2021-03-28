@@ -5,8 +5,13 @@ package ut5_6_cuenta;
  * @version 1.0
  */
 public class Cuenta {
-		
-		
+		/**
+		 * 
+		 * @param nombrecliente valor String nombre del cliente
+		 * @param ncuenta valor String numero de cuenta
+		 * @param tipointeres valor numerico paraporcentaje tipo de interes
+		 * @param saldo valor numerico total saldo de la cuente
+		 */
 		private String nombrecliente;
 		private String ncuenta;
 		private double tipointeres;
@@ -17,6 +22,13 @@ public class Cuenta {
 			tipointeres=0;
 			saldo=0;
 		}
+		/**
+		 * 
+		 * @param nombrecliente valor String nombre del cliente
+		 * @param ncuenta valor String numero de cuenta
+		 * @param tipointeres valor numerico paraporcentaje tipo de interes
+		 * @param saldo valor numerico total saldo de la cuente
+		 */
 		public Cuenta(String nombrecliente, String ncuenta, double tipointeres, double saldo) {
 			this.nombrecliente=nombrecliente;
 			this.ncuenta=ncuenta;
