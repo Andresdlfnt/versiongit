@@ -115,4 +115,9 @@ public class Cuenta {
 				return false;
 			}
 		}
+		@Override
+		public String toString() {
+			return "Cuenta: " + ncuenta + "\nNombre cliente: " + nombrecliente + "\nSaldo: " + saldo + "";
+		}
+		
 }
